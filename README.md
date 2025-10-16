@@ -94,6 +94,6 @@ Ubuntu 20.04 LTS or 22.04 LTS (recommended)
 ---
 
 License: MIT License
-Author: Muhammad Raga Titipan (201012310022)
+Author: Muhammad Raga Titipan
 Version: 1.2.0
 Codename: NDNSecure
