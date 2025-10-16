@@ -1,0 +1,3 @@
+Running :
+sudo python3 ml_mitigasi.py --dataset dataset_tree.csv --full
+

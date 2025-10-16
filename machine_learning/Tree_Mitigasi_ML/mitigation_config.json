@@ -1,0 +1,149 @@
+{
+    "timestamp": "2025-08-09 22:42:43",
+    "dataset": "dataset_tree.csv",
+    "algorithms": [
+        "random_forest",
+        "decision_tree",
+        "knn",
+        "isolation_forest",
+        "hist_gradient_boosting"
+    ],
+    "ml_params": {
+        "random_forest": {
+            "n_estimators": 100,
+            "max_depth": 10,
+            "random_state": 42
+        },
+        "decision_tree": {
+            "max_depth": 10,
+            "random_state": 42
+        },
+        "knn": {
+            "n_neighbors": 5,
+            "weights": "distance"
+        },
+        "isolation_forest": {
+            "contamination": 0.05,
+            "random_state": 42
+        },
+        "hist_gradient_boosting": {
+            "max_iter": 100,
+            "learning_rate": 0.1,
+            "max_depth": 10,
+            "random_state": 42
+        }
+    },
+    "suspicious_nodes": {
+        "interest_flooding": [
+            "a_ext1",
+            "a_ext2"
+        ],
+        "cache_poisoning": [
+            "a_int"
+        ]
+    },
+    "feature_columns": [
+        "packet_type_encoded",
+        "from_node_encoded",
+        "from_node_type_encoded",
+        "to_node_encoded",
+        "to_node_type_encoded",
+        "prefix_encoded",
+        "packet_size",
+        "delay_ms",
+        "bandwidth_mbps",
+        "is_nonexistent",
+        "size_ratio",
+        "packet_rate",
+        "throughput_kbps",
+        "cpu_utilization",
+        "memory_utilization"
+    ],
+    "mitigation_stats": {
+        "random_forest": {
+            "total_packets": {
+                "before": 100128,
+                "after": 63644,
+                "reduction": 36.43736017897092
+            },
+            "attack_packets": {
+                "before": 36482,
+                "after": 0,
+                "reduction": 100.0
+            },
+            "legitimate_packets": {
+                "before": 63646,
+                "after": 63644,
+                "reduction": 0.003142381296546523
+            }
+        },
+        "decision_tree": {
+            "total_packets": {
+                "before": 100128,
+                "after": 63644,
+                "reduction": 36.43736017897092
+            },
+            "attack_packets": {
+                "before": 36482,
+                "after": 0,
+                "reduction": 100.0
+            },
+            "legitimate_packets": {
+                "before": 63646,
+                "after": 63644,
+                "reduction": 0.003142381296546523
+            }
+        },
+        "knn": {
+            "total_packets": {
+                "before": 100128,
+                "after": 63644,
+                "reduction": 36.43736017897092
+            },
+            "attack_packets": {
+                "before": 36482,
+                "after": 0,
+                "reduction": 100.0
+            },
+            "legitimate_packets": {
+                "before": 63646,
+                "after": 63644,
+                "reduction": 0.003142381296546523
+            }
+        },
+        "isolation_forest": {
+            "total_packets": {
+                "before": 100128,
+                "after": 96374,
+                "reduction": 3.749201022690955
+            },
+            "attack_packets": {
+                "before": 36482,
+                "after": 35725,
+                "reduction": 2.074995888383312
+            },
+            "legitimate_packets": {
+                "before": 63646,
+                "after": 60649,
+                "reduction": 4.708858372874965
+            }
+        },
+        "hist_gradient_boosting": {
+            "total_packets": {
+                "before": 100128,
+                "after": 63644,
+                "reduction": 36.43736017897092
+            },
+            "attack_packets": {
+                "before": 36482,
+                "after": 0,
+                "reduction": 100.0
+            },
+            "legitimate_packets": {
+                "before": 63646,
+                "after": 63644,
+                "reduction": 0.003142381296546523
+            }
+        }
+    }
+}
